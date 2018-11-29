@@ -32,7 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.qfp.enable_setprop=0 \
 	log.tag.QFP=3
 
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_SOONG_NAMESPACES += \
 	vendor/qcom/fingerprint/QFPCalibration
 
