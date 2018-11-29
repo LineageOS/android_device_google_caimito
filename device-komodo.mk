@@ -34,7 +34,7 @@ endif
 
 LOCAL_PATH := device/google/caimito
 
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
 endif
 ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
@@ -199,7 +199,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.cca.enabled=false
 
 # Bluetooth hci_inject test tool
-PRODUCT_PACKAGES_DEBUG += \
+PRODUCT_PACKAGES_ENG += \
     hci_inject
 
 # Bluetooth OPUS codec
@@ -207,11 +207,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.opus.enabled=true
 
 # Bluetooth SAR test tool
-PRODUCT_PACKAGES_DEBUG += \
+PRODUCT_PACKAGES_ENG += \
     sar_test
 
 # Bluetooth EWP test tool
-PRODUCT_PACKAGES_DEBUG += \
+PRODUCT_PACKAGES_ENG += \
     ewp_tool
 
 # Bluetooth AAC VBR
@@ -223,7 +223,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hfp.swb.supported=true
 
 # Override BQR mask to enable LE Audio Choppy report, remove BTRT logging
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.bqr.event_mask=295006 \
     persist.bluetooth.bqr.vnd_quality_mask=29 \
@@ -427,7 +427,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # ETM
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 $(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
 endif
 
