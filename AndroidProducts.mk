@@ -29,7 +29,11 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/factory_ripcurrent24.mk \
     $(LOCAL_DIR)/aosp_tokay.mk \
     $(LOCAL_DIR)/aosp_tokay_fullmte.mk \
-    $(LOCAL_DIR)/factory_tokay.mk
+    $(LOCAL_DIR)/factory_tokay.mk \
+    $(LOCAL_DIR)/lineage_caiman.mk \
+    $(LOCAL_DIR)/lineage_komodo.mk \
+    $(LOCAL_DIR)/lineage_tokay.mk
+
 COMMON_LUNCH_CHOICES := \
     aosp_caiman-trunk_staging-userdebug \
     aosp_komodo-trunk_staging-userdebug \

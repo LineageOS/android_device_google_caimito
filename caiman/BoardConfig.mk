@@ -31,3 +31,6 @@ include device/google/caimito/wifi/BoardConfig-wifi.mk
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 -include device/google/common/etm/6_1/BoardUserdebugModules.mk
 endif
+
+DEVICE_PATH := device/google/caimito
+include $(DEVICE_PATH)/$(TARGET_BOOTLOADER_BOARD_NAME)/BoardConfigLineage.mk
