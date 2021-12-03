@@ -1,0 +1,19 @@
+# AOC
+persist.vendor.aoc.firmware.disable_monitor_mode=true
+
+# DRM
+drm.service.enabled=true
+media.mediadrmservice.enable=true
+
+# GPS
+persist.vendor.gps.hal.service.name=vendor
+
+# Radio
+persist.vendor.ril.ecc.use.xml=1
+persist.vendor.ril.support_nr_ds=1
+persist.vendor.ril.use_radio_hal=2.1
+ro.vendor.config.build_carrier=europen
+vendor.rild.libpath=libsitril.so
+
+# USB
+ro.usb.uvc.enabled=true
