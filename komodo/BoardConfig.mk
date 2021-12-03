@@ -33,4 +33,5 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 endif
 
 DEVICE_PATH := device/google/caimito
+VENDOR_PATH := vendor/google/komodo
 include $(DEVICE_PATH)/$(TARGET_BOOTLOADER_BOARD_NAME)/BoardConfigLineage.mk
