@@ -20,6 +20,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
     $(DEVICE_PATH)/permissions/permissions_com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/permissions_com.google.android.euicc.xml
 
+PRODUCT_PACKAGES += \
+    EuiccSupportPixelOverlay
+
 # For Google Camera
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/sysconfig/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
