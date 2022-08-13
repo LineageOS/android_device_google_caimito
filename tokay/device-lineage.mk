@@ -12,3 +12,7 @@ PRODUCT_PACKAGES += \
     PixelDisplayServiceOverlayTokay
 
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.tokay.touch.rc

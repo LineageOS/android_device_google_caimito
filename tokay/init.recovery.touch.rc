@@ -1,0 +1,4 @@
+on init
+   #insmod /lib/modules/heatmap.ko
+   #insmod /lib/modules/goog_touch_interface.ko
+   insmod /lib/modules/syna_touch.ko
