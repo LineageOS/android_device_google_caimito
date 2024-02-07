@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "android_device_google_zumapro",
+    "target_path": "device/google/zumapro"
+  },
+  {
+    "repository": "device/google/caimito-kernels/6.1",
+    "target_path": "device/google/caimito-kernels/6.1",
+    "remote": "aosp-caimito"
+  }
+]
