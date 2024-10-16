@@ -56,7 +56,6 @@ include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 include device/google/gs-common/modem/radio_ext/radio_ext.mk
-include device/google/gs-common/pixelsupport/pixelsupport.mk
 
 # Increment the SVN for any official public releases
 ifdef RELEASE_SVN_TOKAY
