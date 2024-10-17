@@ -21,13 +21,10 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 9
 PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
 
-PRODUCT_SYSTEM_NAME := $(DEVICE_CODENAME)
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
-    PRIVATE_BUILD_DESC="tokay-user 15 AP3A.241005.015 12366759 release-keys"
-
-BUILD_FINGERPRINT := google/tokay/tokay:15/AP3A.241005.015/12366759:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES := \
+    BuildDesc="tokay-user 15 AP3A.241005.015 12366759 release-keys" \
+    BuildFingerprint=google/tokay/tokay:15/AP3A.241005.015/12366759:user/release-keys \
+    DeviceProduct=$(DEVICE_CODENAME)
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
