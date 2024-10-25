@@ -116,6 +116,8 @@ if [ -z "${ONLY_FIRMWARE}" ]; then
 
     set_module_suffix "vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so" "-vendor" "${VENDOR_TXT}"
     set_module_suffix "vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" "-vendor" "${VENDOR_TXT}"
+    set_module_suffix "vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so" "-vendor" "${VENDOR_TXT}"
+    set_module_suffix "vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so" "-vendor" "${VENDOR_TXT}"
 
     extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
