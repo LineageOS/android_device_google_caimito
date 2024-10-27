@@ -2723,8 +2723,8 @@ vendor/lib64/android.hardware.weaver2-impl.nos.so
 vendor/lib64/aocx-ndk.so
 vendor/lib64/com.google.edgetpu.dba-V1-ndk.so
 vendor/lib64/com.google.edgetpu.tachyon-V1-ndk.so
-vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so;MODULE_SUFFIX=-vendor
-vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so;MODULE_SUFFIX=-vendor
+vendor/lib64/com.google.edgetpu_app_service-V4-ndk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so
 vendor/lib64/com.google.input-V2-ndk.so
 vendor/lib64/com.google.input-V3-ndk.so
@@ -2830,8 +2830,8 @@ vendor/lib64/vendor.google.battery_mitigation.service_static.so
 vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so
 vendor/lib64/vendor.google.google_battery-V3-ndk.so
 vendor/lib64/vendor.google.radio_ext-V1-ndk.so
-vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so;MODULE_SUFFIX=-vendor
-vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so;MODULE_SUFFIX=-vendor
+vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.google.whitechapel.audio.extension-V2-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.google.whitechapel.audio.hal.audio.so
 vendor/lib64/vendor.google.whitechapel.audio.hal.audio.sound_dose.aoc.so
 vendor/lib64/vendor.google.whitechapel.audio.hal.effect.so
