@@ -16,5 +16,5 @@
 
 <resources>
     <!-- IWLAN-->
-    <string name="config_qualified_networks_service_package">com.android.qns</string>
+    <string translatable="false" name="config_qualified_networks_service_package">com.android.qns</string>
 </resources>
