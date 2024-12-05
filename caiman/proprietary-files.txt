@@ -2,6 +2,9 @@
 
 # product partition
 
+# Adaptive Connectivity
+product/priv-app/SCONE-v31427/SCONE-v31427.apk;PRESIGNED
+
 # AiAi
 product/priv-app/AICorePrebuilt-aicore_20240509.01_RC02/AICorePrebuilt-aicore_20240509.01_RC02.apk;PRESIGNED
 product/priv-app/DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02/DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02.apk;PRESIGNED
@@ -69,6 +72,13 @@ product/priv-app/DMService/DMService.apk
 product/priv-app/DiagMon/DiagMon.apk
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
+
+# Satellite
+product/etc/default-permissions/default-permissions-stargate.xml
+product/etc/permissions/com.google.android.apps.stargate.support.xml
+product/etc/permissions/com.google.android.apps.stargate.xml
+product/etc/sysconfig/satellite_sos.xml
+product/priv-app/SatelliteGatewayPrebuilt/SatelliteGatewayPrebuilt.apk;PRESIGNED
 
 # Temperature sensor
 product/etc/sysconfig/firproximity.xml
@@ -165,6 +175,11 @@ system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
 system_ext/etc/permissions/oemrilhook.xml
 system_ext/framework/oemrilhook.jar
 system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
+
+# Satellite
+system_ext/etc/permissions/privapp-permissions-satellite.xml
+system_ext/priv-app/PixelSatelliteService/PixelSatelliteService.apk
+system_ext/priv-app/VendorSatelliteService/VendorSatelliteService.apk
 
 # VZW
 system_ext/etc/permissions/vzw_mvs_permissions.xml

@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+# Satellite
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/conf/allowlist_satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_satellite.xml
+
 # wireless_charger HAL service
 include device/google/gs-common/wireless_charger/wireless_charger.mk
 
