@@ -82,6 +82,11 @@ product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED
 product/priv-app/OemDmTrigger/OemDmTrigger.apk
 product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
 
+# system partition
+
+# IMS
+system/bin/oem-iptables-init.sh
+
 # system_ext partition
 
 # Audio
