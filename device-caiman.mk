@@ -27,12 +27,13 @@ endif
 
 LOCAL_PATH := device/google/caimito
 
-include device/google/caimito/caiman/uwb/uwb_calibration.mk
-
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/caiman/overlay
 
-include device/google/caimito/audio/caiman/audio-tables.mk
+# Audio
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/predump_gti.mk
@@ -55,10 +56,6 @@ $(call soong_config_set,google3a_config,target_device,caiman)
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
 
-# Init files
-PRODUCT_COPY_FILES += \
-	device/google/caimito/conf/init.caiman.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.caiman.rc
-
 # Recovery files
 PRODUCT_COPY_FILES += \
         device/google/caimito/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.caiman.rc
@@ -69,9 +66,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
 	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
 	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
-	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-	device/google/caimito/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
-	device/google/caimito/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
 	Tag \
@@ -84,34 +79,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
-	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
-	device/google/caimito/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
+	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
 # Bluetooth HAL
-PRODUCT_COPY_FILES += \
-	device/google/caimito/bluetooth/bt_vendor_overlay_caiman.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a2dp_offload.supported=true \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
-
-# Coex Config
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/radio/caiman/coex
-PRODUCT_PACKAGES += \
-    camera_front_mipi_coex_table \
-    camera_rear_main_dbr_coex_table \
-    camera_rear_main_mipi_coex_table \
-    camera_rear_tele_mipi_coex_table \
-    camera_rear_wide_mipi_coex_table \
-    display_primary_mipi_coex_table
-
-# Bluetooth Tx power caps
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -183,14 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SettingsCaimanOverlay
 
-# UWB
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/caimito/caiman/uwb
-
-# Location
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/caiman
-$(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
-PRODUCT_PACKAGES += gps.cfg
 # For GPS property
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 
@@ -301,10 +267,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
 	persist.bluetooth.leaudio.notify.idle.during.call=true
 
-# LE Audio Offload Capabilities setting
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml
-
 # Disable LE Audio dual mic SWB call support
 # This may depend on the BT controller capability or the launch strategy
 # For example, P22 BT chip is not able to support 32k dual mic
@@ -332,6 +294,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
+# Telephony Satellite Feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
+
 # Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride
@@ -339,10 +305,6 @@ PRODUCT_PACKAGES += \
 # Thread Dispatcher enablement in Bluetooth HAL
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=false
-
-#Component Override for Pixel Troubleshooting App
-PRODUCT_COPY_FILES += \
-    device/google/caimito/caiman/caiman-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/caiman-component-overrides.xml
 
 # Bluetooth device id
 # Caiman: 0x4110
@@ -352,13 +314,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
-# LE Audio configuration scenarios
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json
-
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
 
 # Enable APF by default
 PRODUCT_VENDOR_PROPERTIES += \

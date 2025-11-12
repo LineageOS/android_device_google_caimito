@@ -18,8 +18,6 @@ TARGET_BOARD_INFO_FILE := device/google/caimito/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := caiman
 TARGET_SCREEN_DENSITY := 480
 
-include device/google/caimito/device-caimito-common.mk
-
 include device/google/zumapro/BoardConfig-common.mk
 include device/google/caimito/sepolicy/caiman-sepolicy.mk
 include device/google/caimito/wifi/BoardConfig-wifi.mk
