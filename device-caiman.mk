@@ -32,8 +32,6 @@ include device/google/caimito/caiman/uwb/uwb_calibration.mk
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/caiman/overlay
 
-USE_AUDIO_HAL_AIDL := true
-
 include device/google/caimito/audio/caiman/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -167,36 +165,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
 	libspatialaudio \
 	librondo
-
-# Keymaster HAL
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# Gatekeeper HAL
-#LOCAL_GATEKEEPER_PRODUCT_PACKAGE ?= android.hardware.gatekeeper@1.0-service.software
-
-
-# Gatekeeper
-# PRODUCT_PACKAGES += \
-# 	android.hardware.gatekeeper@1.0-service.software
-
-# Keymint replaces Keymaster
-# PRODUCT_PACKAGES += \
-# 	android.hardware.security.keymint-service
-
-# Keymaster
-#PRODUCT_PACKAGES += \
-#	android.hardware.keymaster@4.0-impl \
-#	android.hardware.keymaster@4.0-service
-
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.remote
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.1-service.remote
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE := android.hardware.keymaster@4.1-service
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# PRODUCT_PROPERTY_OVERRIDES += \
-# 	ro.hardware.keystore_desede=true \
-# 	ro.hardware.keystore=software \
-# 	ro.hardware.gatekeeper=software
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
@@ -356,15 +324,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=8 \
           ro.com.google.ime.height_ratio=1.12
-
-# Exynos RIL and telephony
-# Support RIL Domain-selection
-SUPPORT_RIL_DOMAIN_SELECTION := true
-
-SUPPORT_VENDOR_SATELLITE_SERVICE := true
-
-# Support NTN(satellite) with dual SIM
-NTN_DUAL_SIM := true
 
 # Enable Bluetooth AutoOn feature
 PRODUCT_PRODUCT_PROPERTIES += \
