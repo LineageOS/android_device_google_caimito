@@ -16,20 +16,11 @@
 
 TARGET_BOARD_INFO_FILE := device/google/caimito/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := tokay
-
-ifdef PHONE_CAR_BOARD_PRODUCT
-    include vendor/auto/embedded/products/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
-else
-    TARGET_SCREEN_DENSITY := 420
-endif
-
-BOARD_USES_GENERIC_AUDIO := true
-USES_DEVICE_GOOGLE_CAIMITO := true
+TARGET_SCREEN_DENSITY := 420
 
 include device/google/caimito/device-caimito-common.mk
 
 include device/google/zumapro/BoardConfig-common.mk
-include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
 include device/google/caimito/sepolicy/tokay-sepolicy.mk
 include device/google/caimito/wifi/BoardConfig-wifi.mk
 

@@ -17,13 +17,10 @@
 TARGET_BOARD_INFO_FILE := device/google/caimito/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := komodo
 TARGET_SCREEN_DENSITY := 480
-BOARD_USES_GENERIC_AUDIO := true
-USES_DEVICE_GOOGLE_CAIMITO := true
 
 include device/google/caimito/device-caimito-common.mk
 
 include device/google/zumapro/BoardConfig-common.mk
-include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
 include device/google/caimito/sepolicy/komodo-sepolicy.mk
 include device/google/caimito/wifi/BoardConfig-wifi.mk
 

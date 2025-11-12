@@ -32,8 +32,6 @@ include device/google/caimito/komodo/uwb/uwb_calibration.mk
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
 
-USE_AUDIO_HAL_AIDL := true
-
 include device/google/caimito/audio/komodo/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -185,36 +183,6 @@ PRODUCT_PACKAGES += \
 	libspatialaudio \
 	librondo
 
-# Keymaster HAL
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# Gatekeeper HAL
-#LOCAL_GATEKEEPER_PRODUCT_PACKAGE ?= android.hardware.gatekeeper@1.0-service.software
-
-
-# Gatekeeper
-# PRODUCT_PACKAGES += \
-# 	android.hardware.gatekeeper@1.0-service.software
-
-# Keymint replaces Keymaster
-# PRODUCT_PACKAGES += \
-# 	android.hardware.security.keymint-service
-
-# Keymaster
-#PRODUCT_PACKAGES += \
-#	android.hardware.keymaster@4.0-impl \
-#	android.hardware.keymaster@4.0-service
-
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.remote
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.1-service.remote
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE := android.hardware.keymaster@4.1-service
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# PRODUCT_PROPERTY_OVERRIDES += \
-# 	ro.hardware.keystore_desede=true \
-# 	ro.hardware.keystore=software \
-# 	ro.hardware.gatekeeper=software
-
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
     device/google/caimito/powerstats/komodo
@@ -348,15 +316,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Support LE & Classic concurrent encryption (b/330704060)
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.ble.allow_enc_with_bredr=true
-
-# Exynos RIL and telephony
-# Support RIL Domain-selection
-SUPPORT_RIL_DOMAIN_SELECTION := true
-
-SUPPORT_VENDOR_SATELLITE_SERVICE := true
-
-# Support NTN(satellite) with dual SIM
-NTN_DUAL_SIM := true
 
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
