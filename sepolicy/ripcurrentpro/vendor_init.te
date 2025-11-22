@@ -1,4 +1,0 @@
-# Vendor Ims Service property - Set the audio path for PDK build
-userdebug_or_eng(`
-    set_prop(vendor_init, vendor_imssvc_prop)
-')
