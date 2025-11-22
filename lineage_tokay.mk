@@ -26,8 +26,8 @@ TARGET_SCREEN_HEIGHT := 2424
 TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="tokay-user 16 BP2A.250805.005 13691446 release-keys" \
-    BuildFingerprint=google/tokay/tokay:16/BP2A.250805.005/13691446:user/release-keys \
+    BuildDesc="tokay-user 16 BP3A.251105.015 14339231 release-keys" \
+    BuildFingerprint=google/tokay/tokay:16/BP3A.251105.015/14339231:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
