@@ -60,7 +60,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layer
 
 # Recovery files
 PRODUCT_COPY_FILES += \
-        device/google/caimito/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.caiman.rc
+    device/google/caimito/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.caiman.rc
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -330,7 +330,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.recovery.caiman.touch.rc
+    init.recovery.caimito.touch.rc
 
 # Overlays
 PRODUCT_PACKAGES += \

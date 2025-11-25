@@ -76,7 +76,7 @@ PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
 
 # Recovery files
 PRODUCT_COPY_FILES += \
-        device/google/caimito/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.komodo.rc
+    device/google/caimito/recovery/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.komodo.rc
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -330,7 +330,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.recovery.komodo.touch.rc
+    init.recovery.caimito.touch.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
