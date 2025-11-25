@@ -1,5 +1,7 @@
 #
 # SPDX-FileCopyrightText: 2020 The Android Open-Source Project
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: The Calyx Institute
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -11,6 +13,6 @@ include device/google/zumapro/BoardConfig-common.mk
 include device/google/caimito/sepolicy/caiman-sepolicy.mk
 include device/google/caimito/wifi/BoardConfig-wifi.mk
 
-DEVICE_PATH := device/google/caimito
-VENDOR_PATH := vendor/google/caiman
-include $(DEVICE_PATH)/$(TARGET_BOOTLOADER_BOARD_NAME)/BoardConfigLineage.mk
+include $(DEVICE_PATH)/BoardConfigCommon.mk
+
+include $(VENDOR_PATH)/BoardConfigVendor.mk

@@ -268,3 +268,51 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.apf_disabled=false \
     vendor.powerhal.apf_enabled=true
+
+# ANGLE - Almost Native Graphics Layer Engine
+PRODUCT_PACKAGES += \
+    ANGLE \
+    libEGL_angle \
+    libGLESv1_CM_angle \
+    libGLESv2_angle
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    dump_gsc.sh
+
+# EUICC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+
+PRODUCT_PACKAGES += \
+    EuiccSupportPixelOverlay
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.location.gps.prebuilt.xml
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.tokay.touch.rc
+
+# Overlays
+PRODUCT_PACKAGES += \
+    PixelDisplayServiceOverlayTokay
+
+# PowerShare
+include hardware/google/pixel/powershare/device.mk
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
+
+# Satellite
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/conf/allowlist_satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_satellite.xml
+
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal
+
+# Wireless charging
+include device/google/gs-common/wireless_charger/wireless_charger.mk
