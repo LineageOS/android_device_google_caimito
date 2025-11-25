@@ -21,11 +21,28 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 include device/google/zumapro/device-shipping-common.mk
-include device/google/gs-common/bcmbt/bluetooth.mk
-include device/google/gs-common/touch/gti/predump_gti.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
-include device/google/gs-common/modem/radio_ext/radio_ext.mk
-include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.prebuilt.xml \
+    android.hardware.bluetooth_le.prebuilt.xml
+
+DEVICE_MANIFEST_FILE += device/google/gs-common/bcmbt/manifest_bluetooth.xml
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/bcmbt/compatibility_matrix.xml
+
+# Touch
+PRODUCT_PACKAGES += \
+    dump_touch.sh \
+    predump_gti0.sh \
+    predump_touch.sh \
+    touch_gti_ical
+
+# Radio extensions
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/modem/radio_ext/compatibility_matrix.xml
+
+# Google RIL
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/gril/hidl/1.7/compatibility_matrix.xml
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
@@ -315,4 +332,4 @@ PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
 
 # Wireless charging
-include device/google/gs-common/wireless_charger/wireless_charger.mk
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/wireless_charger/compatibility_matrix.xml
