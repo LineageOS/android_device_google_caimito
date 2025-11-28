@@ -13,7 +13,6 @@ DEVICE_CODENAME := caiman
 DEVICE_PATH := device/google/caimito
 VENDOR_PATH := vendor/google/caiman
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
-$(call inherit-product, device/google/zumapro/lineage_common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
