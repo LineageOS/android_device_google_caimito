@@ -35,13 +35,6 @@ PRODUCT_PACKAGES += \
 DEVICE_MANIFEST_FILE += device/google/gs-common/bcmbt/manifest_bluetooth.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/bcmbt/compatibility_matrix.xml
 
-# Touch
-PRODUCT_PACKAGES += \
-    dump_touch.sh \
-    predump_gti0.sh \
-    predump_touch.sh \
-    touch_gti_ical
-
 # Radio extensions
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/modem/radio_ext/compatibility_matrix.xml
 
