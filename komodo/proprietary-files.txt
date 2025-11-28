@@ -92,6 +92,13 @@ product/priv-app/SatelliteGatewayPrebuilt/SatelliteGatewayPrebuilt.apk;PRESIGNED
 product/etc/sysconfig/firproximity.xml
 product/priv-app/HealthIntelligencePrebuilt-1762/HealthIntelligencePrebuilt-1762.apk;PRESIGNED
 
+# TTS
+product/tts/google/de-de/de-de-x-multi-r57.zvoice
+product/tts/google/es-es/es-es-x-multi-r56.zvoice
+product/tts/google/fr-fr/fr-fr-x-multi-r57.zvoice
+product/tts/google/it-it/it-it-x-multi-r54.zvoice
+product/tts/google/ja-jp/ja-jp-x-multi-r55.zvoice
+
 # VZW
 product/app/VZWAPNLib/VZWAPNLib.apk;PRESIGNED
 product/etc/permissions/com.android.omadm.service.xml
@@ -197,6 +204,10 @@ system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
 system_ext/etc/permissions/privapp-permissions-satellite.xml
 system_ext/priv-app/PixelSatelliteService/PixelSatelliteService.apk
 system_ext/priv-app/VendorSatelliteService/VendorSatelliteService.apk
+
+# Watchdog
+system_ext/bin/gs_watchdogd
+system_ext/etc/init/init.gs_watchdogd.rc
 
 # VZW
 system_ext/etc/permissions/vzw_mvs_permissions.xml
