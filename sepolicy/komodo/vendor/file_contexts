@@ -1,0 +1,9 @@
+/(vendor|system/vendor)/bin/hw/android\.hardware\.qorvo\.uwb-service u:object_r:hal_uwb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/qorvo\.uci-bridge u:object_r:qorvo-uci-daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/qorvo\.uci-daemon u:object_r:qorvo-uci-daemon_exec:s0
+/dev/lwis-act-cornerfolk-taotie-front u:object_r:lwis_device:s0
+/dev/lwis-eeprom-humbaba u:object_r:lwis_device:s0
+/dev/lwis-eeprom-smaug-taotie-front u:object_r:lwis_device:s0
+/dev/lwis-ois-humbaba u:object_r:lwis_device:s0
+/dev/lwis-sensor-taotie-front u:object_r:lwis_device:s0
+/dev/lwis-sensor-taotie-tele u:object_r:lwis_device:s0

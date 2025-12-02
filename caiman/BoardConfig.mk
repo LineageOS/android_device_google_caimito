@@ -10,8 +10,14 @@ TARGET_BOOTLOADER_BOARD_NAME := caiman
 TARGET_SCREEN_DENSITY := 480
 
 include device/google/zumapro/BoardConfig-common.mk
-include device/google/caimito/sepolicy/caiman-sepolicy.mk
 include device/google/caimito/wifi/BoardConfig-wifi.mk
+
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/google/caimito/sepolicy/caiman/vendor \
+    device/google/caimito/sepolicy/vendor \
+    hardware/google/pixel-sepolicy/vibrator/common \
+    hardware/google/pixel-sepolicy/vibrator/cs40l26
 
 include $(DEVICE_PATH)/BoardConfigCommon.mk
 
