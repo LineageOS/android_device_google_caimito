@@ -5,19 +5,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_BOARD_INFO_FILE := device/google/caimito/board-info.txt
-TARGET_BOOTLOADER_BOARD_NAME := caiman
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := $(DEVICE_CODENAME)
 TARGET_SCREEN_DENSITY := 480
-
-include device/google/zumapro/BoardConfig-common.mk
-include device/google/caimito/wifi/BoardConfig-wifi.mk
 
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/google/caimito/sepolicy/caiman/vendor \
-    device/google/caimito/sepolicy/vendor \
-    hardware/google/pixel-sepolicy/vibrator/common \
-    hardware/google/pixel-sepolicy/vibrator/cs40l26
+    $(DEVICE_PATH)/sepolicy/$(DEVICE_CODENAME)/vendor
 
 include $(DEVICE_PATH)/BoardConfigCommon.mk
 
