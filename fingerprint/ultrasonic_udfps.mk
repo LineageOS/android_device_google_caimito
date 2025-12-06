@@ -6,8 +6,6 @@
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/caimito/fingerprint/device_framework_matrix_product.xml
-
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.qfp.enable_setprop=0 \
 	log.tag.QFP=3
