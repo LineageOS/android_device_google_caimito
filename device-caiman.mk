@@ -25,22 +25,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 include device/google/zumapro/device-shipping-common.mk
-include device/google/caimito/fingerprint/ultrasonic_udfps.mk
+
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.prebuilt.xml \
     android.hardware.bluetooth_le.prebuilt.xml
-
-# Increment the SVN for any official public releases
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=40
-
-# Set device family property for SMR
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.device_family=CM4KM4TK4TG4
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
 
 # Recovery files
 PRODUCT_COPY_FILES += \
@@ -66,32 +59,9 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
-# Bluetooth HAL
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bluetooth.a2dp_offload.supported=true \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
-
-# DCK properties based on target
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3 \
-    ro.gms.dck.se_capability=1
-
 # POF
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.finder.supported=true
-
-# declare use of spatial audio
-PRODUCT_PROPERTY_OVERRIDES += \
-       ro.audio.spatializer_enabled=true
-
-# HdMic Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.app.audio.gsenet.version=1
-
-# Audio CCA property
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.vendor.audio.cca.enabled=false
 
 # Bluetooth OPUS codec
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -112,10 +82,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.bqr.vnd_trace_mask=0 \
     persist.bluetooth.vendor.btsnoop=false
 
-# default BDADDR for EVB only
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
-
 # UWB Overlay
 PRODUCT_PACKAGES += \
     UwbOverlayCM4 \
@@ -128,76 +94,6 @@ PRODUCT_PACKAGES += \
 # Settings Overlay
 PRODUCT_PACKAGES += \
     SettingsCaimanOverlay
-
-# For GPS property
-PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
-
-# Display LBE
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
-
-# Display ACL
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.0.brightness.acl.default=1
-
-PRODUCT_VENDOR_PROPERTIES += \
-	persist.device_config.configuration.disable_rescue_party=true
-
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.udfps.als_feed_forward_supported=true \
-    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
-
-# OIS with system imu
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.ois_with_system_imu=true
-
-# Allow external binning setting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.allow_external_binning_setting=true
-
-# Camera Vendor property
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.front_720P_always_binning=true
-
-# Enable camera exif model/make reporting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.exif_reveal_make_model=true
-
-# Media Performance Class 15
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
-
-# Display RRS default Config
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=960x2142@120:120
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.preferred_mode=960x2142@120:120
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=5:120,:1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
-
-# Display OP HZ Config
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.primarydisplay.op.hs_hz=120 \
-    vendor.primarydisplay.op.ns_hz=120
-
-# Display fixed TE2
-PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
-
-# Vibrator HAL
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.vibrator.hal.chirp.enabled=1 \
-    ro.vendor.vibrator.hal.device.mass=0.222 \
-    ro.vendor.vibrator.hal.loc.coeff=2.8 \
-    persist.vendor.vibrator.hal.context.enable=false \
-    persist.vendor.vibrator.hal.context.scale=60 \
-    persist.vendor.vibrator.hal.context.fade=true \
-    persist.vendor.vibrator.hal.context.cooldowntime=1600 \
-    persist.vendor.vibrator.hal.context.settlingtime=5000
-
-# Override Output Distortion Gain
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.audio.hapticgenerator.distortion.output.gain=0.48
-
-# PKVM Memory Reclaim
-PRODUCT_VENDOR_PROPERTIES += \
-    hypervisor.memory_reclaim.supported=1
 
 # Bluetooth LE Audio
 # Unicast
@@ -279,11 +175,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
-# Enable APF by default
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.powerhal.apf_disabled=false \
-    vendor.powerhal.apf_enabled=true
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
