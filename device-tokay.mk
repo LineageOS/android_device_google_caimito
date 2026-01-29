@@ -15,6 +15,8 @@ PRODUCT_16K_DEVELOPER_OPTION := true
 endif
 
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/overlay-lineage
 
 # Audio
 PRODUCT_COPY_FILES += \
