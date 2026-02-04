@@ -31,6 +31,9 @@ ro.bluetooth.finder.supported=true
 ro.bluetooth.leaudio_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=true
 
+# Device family
+ro.build.device_family=CM4KM4TK4TG4
+
 # Google keyboard
 ro.com.google.ime.height_ratio=1.09
 ro.com.google.ime.kb_pad_port_b=8
