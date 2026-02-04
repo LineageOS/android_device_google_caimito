@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de17251c_88c39fcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-02-04T04:29:42Z",
+      "side": 1,
+      "message": "Note: Needs @mkbestas@lineageos.org to run yet-unpushed sepolicy dump script that handles common trees - mosey_app.te and the associated labels/domains are net-new.",
+      "revId": "c2f906568711051e872e807e6d9aa14311a4721d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
