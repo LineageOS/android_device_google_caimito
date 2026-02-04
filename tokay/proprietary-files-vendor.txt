@@ -77,6 +77,7 @@ vendor/bin/insmod.sh
 vendor/bin/liboemservice_proxy_default
 vendor/bin/modem_logging_control
 vendor/bin/modem_ml_svc_sit
+vendor/bin/mosey_server
 vendor/bin/pcie_power_control
 vendor/bin/pixel-experiments-recovery.sh
 vendor/bin/pixelstats-vendor
@@ -333,6 +334,7 @@ vendor/etc/init/libg3a_gabc.rc
 vendor/etc/init/libg3a_gaf.rc
 vendor/etc/init/libg3a_ghawb.rc
 vendor/etc/init/memtrack.rc
+vendor/etc/init/mosey.rc
 vendor/etc/init/pcie_power.rc
 vendor/etc/init/pixel-experiments-recovery.rc
 vendor/etc/init/pixel-gnss-default.rc
@@ -447,6 +449,7 @@ vendor/etc/vintf/manifest/manifest.xml
 vendor/etc/vintf/manifest/manifest_aocx.xml
 vendor/etc/vintf/manifest/manifest_gralloc_aidl2.xml
 vendor/etc/vintf/manifest/manifest_input.processor-service.xml
+vendor/etc/vintf/manifest/manifest_mosey.xml
 vendor/etc/vintf/manifest/manifest_radioext.xml
 vendor/etc/vintf/manifest/memtrack.xml
 vendor/etc/vintf/manifest/pixel-display-default.xml
@@ -3394,6 +3397,7 @@ vendor/lib64/libmemtrack-pixel.so
 vendor/lib64/libmetrics_logger.so
 vendor/lib64/libmodem_ml_svc_proto.so
 vendor/lib64/libmodem_svc_proto_legacy_soong.so
+vendor/lib64/libmosey_daemon_ffi.so
 vendor/lib64/libnos_citadeld_proxy.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/liboemservice.so
