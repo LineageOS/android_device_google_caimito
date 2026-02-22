@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2022 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
@@ -24,8 +24,7 @@
              </string-array>
     -->
     <string-array name="config_logicalZoomRatios">
-        <item>0</item> <item>0.5</item> <item>0.50783801</item>
+        <item>0</item> <item>0.5</item> <item>0.50796813</item>
         <item>0</item> <item>2.0</item> <item>2.0</item>
-        <item>0</item> <item>5.0</item> <item>5.0</item>
     </string-array>
 </resources>
