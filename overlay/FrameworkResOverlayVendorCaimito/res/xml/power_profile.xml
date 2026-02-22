@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="Android">
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+        <value>3</value>
+        <value>1</value>
+    </array>
+    <item name="cpu.suspend">9.28</item>
+    <item name="cpu.idle">22.71</item>
+    <item name="cpu.active">10.62</item>
+    <item name="cpu.cluster_power.cluster0">0</item>
+    <item name="cpu.cluster_power.cluster1">1.12</item>
+    <item name="cpu.cluster_power.cluster2">2.2</item>
+    <array name="cpu.core_speeds.cluster0">
+        <value>324000</value>
+        <value>610000</value>
+        <value>820000</value>
+        <value>955000</value>
+        <value>1098000</value>
+        <value>1197000</value>
+        <value>1328000</value>
+        <value>1425000</value>
+        <value>1548000</value>
+        <value>1696000</value>
+        <value>1849000</value>
+        <value>1950000</value>
+    </array>
+    <array name="cpu.core_speeds.cluster1">
+        <value>357000</value>
+        <value>578000</value>
+        <value>648000</value>
+        <value>787000</value>
+        <value>910000</value>
+        <value>1065000</value>
+        <value>1221000</value>
+        <value>1328000</value>
+        <value>1418000</value>
+        <value>1549000</value>
+        <value>1795000</value>
+        <value>1945000</value>
+        <value>2130000</value>
+        <value>2245000</value>
+        <value>2367000</value>
+        <value>2450000</value>
+        <value>2600000</value>
+    </array>
+    <array name="cpu.core_speeds.cluster2">
+        <value>700000</value>
+        <value>1164000</value>
+        <value>1296000</value>
+        <value>1557000</value>
+        <value>1745000</value>
+        <value>1885000</value>
+        <value>1999000</value>
+        <value>2147000</value>
+        <value>2294000</value>
+        <value>2363000</value>
+        <value>2499000</value>
+        <value>2687000</value>
+        <value>2802000</value>
+        <value>2914000</value>
+        <value>2943000</value>
+        <value>2970000</value>
+        <value>3015000</value>
+        <value>3105000</value>
+    </array>
+    <array name="cpu.core_power.cluster0">
+        <value>1.27</value>
+        <value>5.87</value>
+        <value>6.5</value>
+        <value>7.93</value>
+        <value>10.5</value>
+        <value>14.06</value>
+        <value>16.18</value>
+        <value>17.65</value>
+        <value>20.92</value>
+        <value>24.67</value>
+        <value>34.09</value>
+        <value>47.41</value>
+    </array>
+    <array name="cpu.core_power.cluster1">
+        <value>5.4</value>
+        <value>8.9</value>
+        <value>9.9</value>
+        <value>12.65</value>
+        <value>14.65</value>
+        <value>18.15</value>
+        <value>22.65</value>
+        <value>25.15</value>
+        <value>28.65</value>
+        <value>33.9</value>
+        <value>46.4</value>
+        <value>56.9</value>
+        <value>71.15</value>
+        <value>81.4</value>
+        <value>92.9</value>
+        <value>102.4</value>
+        <value>124.9</value>
+    </array>
+    <array name="cpu.core_power.cluster2">
+        <value>16.91</value>
+        <value>29.84</value>
+        <value>39.6</value>
+        <value>47.85</value>
+        <value>58.03</value>
+        <value>66.96</value>
+        <value>74.66</value>
+        <value>87.45</value>
+        <value>102.03</value>
+        <value>110.83</value>
+        <value>130.63</value>
+        <value>165.41</value>
+        <value>193.74</value>
+        <value>229.21</value>
+        <value>238.15</value>
+        <value>244.34</value>
+        <value>251.35</value>
+        <value>253.83</value>
+    </array>
+    <item name="ambient.on">32</item>
+    <item name="screen.on">98</item>
+    <item name="screen.full">470</item>
+    <item name="camera.flashlight">240.47</item>
+    <item name="camera.avg">900</item>
+    <item name="video">25</item>
+    <item name="audio">75</item>
+    <item name="modem.controller.sleep">0</item>
+    <item name="modem.controller.idle">156</item>
+    <item name="modem.controller.rx">145</item>
+    <array name="modem.controller.tx">
+        <value>153</value>
+        <value>212</value>
+        <value>292</value>
+        <value>359</value>
+        <value>471</value>
+    </array>
+    <item name="modem.controller.voltage">3700</item>
+    <array name="gps.signalqualitybased">
+        <value>28</value>
+        <value>5</value>
+    </array>
+    <item name="gps.voltage">3700</item>
+    <item name="wifi.controller.idle">31</item>
+    <item name="wifi.controller.rx">39</item>
+    <item name="wifi.controller.tx">540</item>
+    <item name="wifi.controller.voltage">3850</item>
+</device>

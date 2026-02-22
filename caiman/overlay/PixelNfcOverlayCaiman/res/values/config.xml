@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- List of SKUs where Secure NFC functionality is supported -->
+    <string-array name="config_skuSupportsSecureNfc">
+        <item>GR83Y</item>
+        <item>GEC77</item>
+        <item>GWVK6</item>
+    </string-array>
+
+    <!-- NFC Antenna Location API -->
+    <integer name="device_width">72</integer>
+    <integer name="device_height">152</integer>
+    <integer-array name="antenna_x">
+        <item>36</item>
+    </integer-array>
+    <integer-array name="antenna_y">
+        <item>44</item>
+    </integer-array>
+</resources>

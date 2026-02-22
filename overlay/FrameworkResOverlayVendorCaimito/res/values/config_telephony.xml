@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Boolean indicating whether to enable persistent logging via DropBoxManager.
+     Used in persisting SOS/emergency related log messages.
+     -->
+    <bool name="config_dropboxmanager_persistent_logging_enabled">true</bool>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether to use deadzone with nav bar -->
+    <bool name="config_useDeadZone">false</bool>
+
+    <!-- The time (in ms) needed to trigger the device entry icon view's long-press affordance -->
+    <integer name="config_lockIconLongPress">100</integer>
+</resources>

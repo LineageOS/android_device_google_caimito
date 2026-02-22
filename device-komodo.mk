@@ -16,10 +16,6 @@ ifneq ($(TARGET_BOOTS_16K),true)
 PRODUCT_16K_DEVELOPER_OPTION := true
 endif
 
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay-lineage
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/overlay-lineage
-
 # Audio
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
@@ -48,8 +44,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
-	android.hardware.nfc-service.st \
-	NfcOverlayKomodo
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -59,29 +54,12 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
-# UWB Overlay
-PRODUCT_PACKAGES += \
-    UwbOverlayKM4 \
-    UwbOverlayKM4Gsi
-
-# WiFi Overlay
-PRODUCT_PACKAGES += \
-    WifiOverlay2024
-
-# Settings Overlay
-PRODUCT_PACKAGES += \
-    SettingsKomodoOverlay
-
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
-
-# Connectivity Resources Overlay for Thread host settings
-PRODUCT_PACKAGES += \
-    ConnectivityResourcesOverlayCaimitoOverride
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -92,9 +70,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.mep.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.mep.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
-PRODUCT_PACKAGES += \
-    EuiccSupportPixelOverlay
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.location.gps.prebuilt.xml
@@ -104,8 +79,30 @@ PRODUCT_PACKAGES += \
     init.recovery.caimito.touch.rc
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/google/caimito/komodo/overlay-lineage \
+    device/google/caimito/overlay-lineage
+
 PRODUCT_PACKAGES += \
-    PixelDisplayServiceOverlayKomodo
+    ConnectivityResourcesOverlayCaimitoOverride \
+    FrameworkResOverlayProductCaimito \
+    FrameworkResOverlayVendorCaimito \
+    PixelNfcOverlayCaimito \
+    PixelWifiOverlay2024 \
+    SafetyRegulatoryInfoOverlayProductCaimito \
+    SettingsGoogleOverlayProductCaimito \
+    SystemUIGoogleOverlayVendorCaimito \
+    TeleServiceOverlayVendorCaimito \
+    TelecomOverlayProductCaimito
+
+PRODUCT_PACKAGES += \
+    DMServiceOverlayVendorKomodo \
+    FrameworkResOverlayVendorKomodo \
+    PixelDisplayServiceOverlayProductKomodo \
+    PixelNfcOverlayKomodo \
+    SettingsGoogleOverlayVendorKomodo \
+    SettingsKomodoOverlay \
+    SystemUIGoogleOverlayVendorKomodo
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk

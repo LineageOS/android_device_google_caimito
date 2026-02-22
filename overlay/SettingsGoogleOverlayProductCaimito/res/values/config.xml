@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether to display pSIM conversion menu in Settings.-->
+    <bool name="config_psim_conversion_menu_enabled">true</bool>
+
+    <!-- Array of carrier id to allow the pSIM conversion-->
+    <integer-array name="config_psim_conversion_menu_enabled_carrier">
+        <item>1</item>
+        <item>3</item>
+        <item>16</item>
+        <item>576</item>
+        <item>1404</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2122</item>
+    </integer-array>
+</resources>
