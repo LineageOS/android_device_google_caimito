@@ -23,7 +23,6 @@ include device/google/zumapro/device-shipping-common.mk
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/google/caimito/tokay/overlay-lineage \
     device/google/caimito/overlay-lineage
 
 PRODUCT_PACKAGES += \
@@ -46,6 +45,9 @@ PRODUCT_PACKAGES += \
     SettingsGoogleOverlayVendorTokay \
     SettingsTokayOverlay \
     SystemUIGoogleOverlayVendorTokay
+
+PRODUCT_PACKAGES += \
+    ApertureOverlayTokay
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
