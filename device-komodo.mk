@@ -22,9 +22,6 @@ SHIPPING_API_LEVEL := 34
 include device/google/zumapro/device-shipping-common.mk
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    device/google/caimito/overlay-lineage
-
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride \
     FrameworkResOverlayProductCaimito \
