@@ -11,7 +11,9 @@
 
     <!-- Array of countries that the dynamic routing is supported.
          Values should be ISO3166 country codes in lowercase. -->
-    <string-array name="config_countries_dynamic_routing_emergency_enabled">
+    <string-array name="config_countries_dynamic_routing_emergency_enabled" translatable="false">
+        <item>th</item>
+        <item>rs</item>
         <item>mk</item>
         <item>al</item>
         <item>cz</item>
@@ -20,7 +22,6 @@
         <item>me</item>
         <item>in</item>
         <item>il</item>
-        <item>tw</item>
         <item>sg</item>
         <item>ch</item>
         <item>sk</item>
@@ -31,7 +32,12 @@
 
     <!-- Array of emergency numbers for dynamic routing.
          Values are the tuples of Country ISO, MNC, and numbers. -->
-    <string-array name="config_dynamic_routing_emergency_numbers">
+    <string-array name="config_dynamic_routing_emergency_numbers" translatable="false">
+        <item>th,00,191,199,1669</item>
+        <item>th,03,191,199,1669</item>
+        <item>th,04,191,199,1669</item>
+        <item>th,05,191,199,1669</item>
+        <item>rs,,193,194</item>
         <item>mk,,192,193,194,195,196</item>
         <item>al,,125,126,127,128,129</item>
         <item>cz,01,156</item>
@@ -41,7 +47,6 @@
         <item>me,,122,123,124</item>
         <item>in,,101,102,103,108</item>
         <item>il,,101,102</item>
-        <item>tw,,110,119</item>
         <item>sg,01,995</item>
         <item>sg,02,995</item>
         <item>sg,03,995</item>
@@ -58,20 +63,5 @@
     <!-- The component name(a flattened ComponentName string) for the telephony domain selection
          service. The device should fallback to the modem based domain selection architecture
          if this is not configured. -->
-    <string name="config_domain_selection_service_component_name">com.android.phone/com.android.services.telephony.domainselection.TelephonyDomainSelectionService</string>
-
-    <!-- The processes names of the logcat logs that will be collected after an emergency call.-->
-    <string-array name="ecc_log_sources_process_names">
-        <item>com.android.phone</item>
-        <item>com.android.telephony.imsmedia</item>
-        <item>com.shannon.imsservice</item>
-        <item>com.android.qns</item>
-        <item>com.google.android.iwlan</item>
-        <item>rild_exynos</item>
-        <item>com.samsung.slsi.telephony.oemril</item>
-        <item>com.google.android.rilextension</item>
-        <item>com.samsung.slsi.telephony.oem.oemrilhookservice</item>
-        <item>com.google.android.dialer</item>
-        <item>com.android.settings</item>
-    </string-array>
+    <string name="config_domain_selection_service_component_name" translatable="false">com.android.phone/com.android.services.telephony.domainselection.TelephonyDomainSelectionService</string>
 </resources>
