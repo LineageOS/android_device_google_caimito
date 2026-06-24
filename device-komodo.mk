@@ -31,8 +31,7 @@ PRODUCT_PACKAGES += \
     SafetyRegulatoryInfoOverlayProductCaimito \
     SettingsGoogleOverlayProductCaimito \
     SystemUIGoogleOverlayVendorCaimito \
-    TeleServiceOverlayVendorCaimito \
-    TelecomOverlayProductCaimito
+    TeleServiceOverlayVendorCaimito
 
 PRODUCT_PACKAGES += \
     DMServiceOverlayVendorKomodo \

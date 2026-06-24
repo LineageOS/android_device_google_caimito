@@ -15,10 +15,6 @@
      that the device interface combination allows for it-->
     <bool name="config_wifiStaWithBridgedSoftApConcurrencySupported">true</bool>
 
-    <!-- Enable Make-Before-Break Wifi network switching.
-         Note: this is conditional on the device supporting dual concurrent STAs. -->
-    <bool name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">true</bool>
-
     <!-- Enable concurrent peer to peer + internet connectivity
          Note: this is conditional on the device supporting dual concurrent STAs. -->
     <bool name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">true</bool>
@@ -38,4 +34,7 @@
          immediately after the country code is sent to the driver (if the method returns a
          success). -->
     <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Boolean indicating whether the mainline supplicant service should be enabled -->
+    <bool name="config_wifiMainlineSupplicantEnabled">true</bool>
 </resources>

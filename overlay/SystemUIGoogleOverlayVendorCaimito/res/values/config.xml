@@ -9,4 +9,7 @@
 
     <!-- The time (in ms) needed to trigger the device entry icon view's long-press affordance -->
     <integer name="config_lockIconLongPress">100</integer>
+
+    <!--  Whether to use a machine learning model for back gesture falsing. -->
+    <bool name="config_useBackGestureML">false</bool>
 </resources>

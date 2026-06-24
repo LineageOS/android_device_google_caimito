@@ -8,7 +8,7 @@
     <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
 
     <!-- When each intermediate UDFPS enroll stage ends, as a fraction of total progress. -->
-    <string-array name="config_udfps_enroll_stage_thresholds">
+    <string-array name="config_udfps_enroll_stage_thresholds" translatable="false">
         <item>0.052</item>
         <item>0.473</item>
         <item>0.578</item>

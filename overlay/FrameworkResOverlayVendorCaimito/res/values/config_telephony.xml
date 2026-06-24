@@ -4,6 +4,9 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Telephony satellite service package name to bind to by default. -->
+    <string name="config_satellite_service_package" translatable="false">com.google.android.satellite</string>
+
     <!-- Boolean indicating whether to enable persistent logging via DropBoxManager.
      Used in persisting SOS/emergency related log messages.
      -->
