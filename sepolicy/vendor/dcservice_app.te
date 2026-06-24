@@ -1,3 +1,0 @@
-binder_call(dcservice_app, hal_bluetooth_btlinux)
-
-allow dcservice_app hal_bluetooth_coexistence_service:service_manager find;
