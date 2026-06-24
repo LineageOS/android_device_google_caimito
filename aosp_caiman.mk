@@ -8,6 +8,12 @@ $(call inherit-product, device/google/caimito/device-caiman.mk)
 
 PRODUCT_NAME := aosp_caiman
 PRODUCT_DEVICE := caiman
-PRODUCT_MODEL := AOSP on caiman
-PRODUCT_BRAND := Android
+PRODUCT_MODEL := Pixel 9 Pro
+PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
+
+PRODUCT_NAME_FOR_ATTESTATION := caiman
+PRODUCT_DEVICE_FOR_ATTESTATION := caiman
+PRODUCT_MODEL_FOR_ATTESTATION := Pixel 9 Pro
+PRODUCT_BRAND_FOR_ATTESTATION := google
+PRODUCT_MANUFACTURER_FOR_ATTESTATION := Google
