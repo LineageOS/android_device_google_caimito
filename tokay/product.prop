@@ -8,6 +8,9 @@ persist.bluetooth.opus.enabled=true
 persist.bluetooth.thread_dispatcher.enabled=false
 persist.vendor.audio.leaudio_sw_offload=true
 
+# Device family
+ro.build.device_family=CM4KM4TK4TG4
+
 # Google keyboard
 ro.com.google.ime.height_ratio=1.09
 ro.com.google.ime.kb_pad_port_b=8

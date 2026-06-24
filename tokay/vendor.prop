@@ -8,9 +8,6 @@ ro.vendor.bluetooth.evb_bdaddr=22:22:22:33:44:55
 # DCK
 ro.gms.dck.eligible_wcc=2
 
-# Device family
-ro.build.device_family=CM4KM4TK4TG4
-
 # Display
 ro.surface_flinger.set_idle_timer_ms=1000
 ro.vendor.display.read_temp_interval=30
@@ -33,10 +30,11 @@ ro.odm.build.media_performance_class=35
 hypervisor.memory_reclaim.supported=1
 
 # Radio
-persist.vendor.ril.use_radio_hal=2.1
+persist.vendor.ril.use_radio_hal=2.2
+ro.vendor.ril.use_radio_hal=2.2
 
 # SVN
-ro.vendor.build.svn=49
+ro.vendor.build.svn=58
 
 # Vibrator
 persist.vendor.vibrator.hal.context.scale=60
@@ -44,3 +42,6 @@ ro.vendor.vibrator.hal.chirp.enabled=1
 ro.vendor.vibrator.hal.device.mass=0.222
 ro.vendor.vibrator.hal.loc.coeff=2.8
 vendor.audio.hapticgenerator.distortion.output.gain=0.48
+
+# Wi-Fi
+ro.vendor.wifi.model=bcm4390
