@@ -19,14 +19,6 @@
         </interface>
     </hal>
     <hal format="aidl">
-        <name>com.google.pixel.moseyservice</name>
-        <version>2</version>
-        <interface>
-            <name>IMoseyService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
         <name>vendor.google.radio_ext</name>
         <interface>
             <name>IRadioExt</name>
