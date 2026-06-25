@@ -8,6 +8,15 @@
 BOOT_SECURITY_PATCH := 2026-06-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+# Kernel
+BOARD_KERNEL_CMDLINE += \
+    fips140.load_sequential=1 \
+    exynos_drm.load_sequential=1 \
+    g2d.load_sequential=1 \
+    samsung_iommu_v9.load_sequential=1 \
+    vh_sched.load_sequential=1 \
+    pcie_exynos_gs.load_sequential=1
+
 include device/google/zumapro/BoardConfig-common.mk
 
 # Kernel modules
