@@ -21,6 +21,10 @@ SHIPPING_API_LEVEL := 34
 # Inherit from zumapro
 include device/google/zumapro/common.mk
 
+# Audio
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
 # Overlays
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride \
