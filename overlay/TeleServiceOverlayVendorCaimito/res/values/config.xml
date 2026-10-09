@@ -12,6 +12,8 @@
     <!-- Array of countries that the dynamic routing is supported.
          Values should be ISO3166 country codes in lowercase. -->
     <string-array name="config_countries_dynamic_routing_emergency_enabled" translatable="false">
+        <item>pk</item>
+        <item>bd</item>
         <item>th</item>
         <item>rs</item>
         <item>mk</item>
@@ -20,6 +22,7 @@
         <item>gr</item>
         <item>hr</item>
         <item>me</item>
+        <item>lk</item>
         <item>in</item>
         <item>il</item>
         <item>sg</item>
@@ -33,6 +36,11 @@
     <!-- Array of emergency numbers for dynamic routing.
          Values are the tuples of Country ISO, MNC, and numbers. -->
     <string-array name="config_dynamic_routing_emergency_numbers" translatable="false">
+        <item>pk,01,15,115</item>
+        <item>pk,03,15</item>
+        <item>pk,06,15,115</item>
+        <item>pk,07,15,115</item>
+        <item>bd,01,999</item>
         <item>th,00,191,199,1669</item>
         <item>th,03,191,199,1669</item>
         <item>th,04,191,199,1669</item>
@@ -42,15 +50,28 @@
         <item>al,,125,126,127,128,129</item>
         <item>cz,01,156</item>
         <item>cz,03,156</item>
+        <item>cz,04,156</item>
+        <item>cz,05,156</item>
+        <item>cz,06,156</item>
+        <item>cz,07,156</item>
+        <item>cz,08,156</item>
+        <item>cz,09,156</item>
+        <item>cz,10,156</item>
+        <item>cz,98,156</item>
+        <item>cz,99,156</item>
         <item>gr,,100,108,166,197,199,1056,11188,116000</item>
         <item>hr,,192,193,194,195,1987</item>
         <item>me,,122,123,124</item>
+        <item>lk,,110,118</item>
         <item>in,,101,102,103,108</item>
         <item>il,,101,102</item>
         <item>sg,01,995</item>
         <item>sg,02,995</item>
         <item>sg,03,995</item>
+        <item>sg,07,995</item>
+        <item>sg,09,995</item>
         <item>sg,10,995</item>
+        <item>sg,12,995</item>
         <item>ch,,1414</item>
         <item>gp,,115,119,191,196,197,116000,116111,116117</item>
         <item>sk,,159</item>
