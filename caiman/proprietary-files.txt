@@ -3,7 +3,7 @@
 # product partition
 
 # Adaptive Connectivity
-product/priv-app/SCONE-v69510/SCONE-v69510.apk;PRESIGNED
+product/priv-app/SCONE-v71525/SCONE-v71525.apk;PRESIGNED
 
 # AiAi
 product/priv-app/AICorePrebuilt-aicore_20260302.01_RC00/AICorePrebuilt-aicore_20260302.01_RC00.apk;PRESIGNED
@@ -25,8 +25,6 @@ product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
 product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml
 product/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml
 product/etc/permissions/com.google.pixel.camera.services.lyricconfigprovider.impl.xml
-product/etc/sysconfig/preinstalled-packages-camera-services-base.xml
-product/etc/sysconfig/preinstalled-packages-camera-services-common.xml
 
 # Felica
 product/etc/felica/common.cfg
@@ -42,8 +40,6 @@ product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIO
 
 # IMS
 product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
-product/etc/sysconfig/preinstalled-packages-com.shannon.imsservice.xml
-product/etc/sysconfig/preinstalled-packages-com.shannon.rcsservice.xml
 
 # NFC
 product/etc/libnfc-nci.conf
@@ -72,8 +68,6 @@ product/etc/sysconfig/pixel_experience_2023.xml
 product/etc/sysconfig/pixel_experience_2023_midyear.xml
 product/etc/sysconfig/pixel_experience_2024.xml
 product/etc/sysconfig/pixel_experience_2024_midyear.xml
-product/etc/sysconfig/preinstalled-packages-pixel-2024-common.xml
-product/etc/sysconfig/preinstalled_packages_pixel_experience_2021_and_newer.xml
 
 # Radio
 product/etc/default-permissions/default-permissions_com.google.android.apps.carrier.carrierwifi.xml
@@ -81,7 +75,6 @@ product/etc/permissions/com.android.sdm.plugins.connmo.xml
 product/etc/permissions/com.android.sdm.plugins.dcmo.xml
 product/etc/permissions/com.android.sdm.plugins.diagmon.xml
 product/etc/permissions/privapp-permissions_com.google.android.apps.carrier.carrierwifi.xml
-product/etc/sysconfig/preinstalled-packages-pixel-carrier.xml
 product/lib64/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmengine.so
 product/lib64/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmjavaplugin.so
 product/priv-app/CarrierSettings/CarrierSettings.apk;PRESIGNED
@@ -93,15 +86,10 @@ product/priv-app/DiagMon/DiagMon.apk
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
 
-# RIL
-product/etc/sysconfig/preinstalled-packages-com.samsung.slsi.telephony.oem.oemrilhookservice.xml
-product/etc/sysconfig/preinstalled-packages-com.samsung.slsi.telephony.oemril.xml
-
 # Satellite
 product/etc/default-permissions/default-permissions-stargate.xml
 product/etc/permissions/com.google.android.apps.stargate.support.xml
 product/etc/permissions/com.google.android.apps.stargate.xml
-product/etc/sysconfig/preinstalled-packages-product-pixel-2024-and-newer.xml
 product/etc/sysconfig/satellite_sos.xml
 product/priv-app/SatelliteGateway-Phone-v91522000/SatelliteGateway-Phone-v91522000.apk;PRESIGNED
 
@@ -117,16 +105,11 @@ product/etc/permissions/com.verizon.apn.xml
 product/etc/permissions/com.verizon.services.xml
 product/etc/permissions/features-verizon.xml
 product/etc/sysconfig/allowlist_com.android.omadm.service.xml
-product/etc/sysconfig/preinstalled-packages-com.verizon.services.xml
-product/etc/sysconfig/preinstalled-packages-com.vzw.apnlib.xml
 product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED
 product/priv-app/OemDmTrigger/OemDmTrigger.apk
 product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
 
 # system_ext partition
-
-# AiAi
-system_ext/etc/sysconfig/preinstalled_packages_connectivity_thermal_power_manager.xml
 
 # Audio
 system_ext/bin/hw/vendor.google.whitechapel.audio.hal.parserservice
@@ -152,7 +135,6 @@ system_ext/framework/com.google.pixel.camera.services.cameraidremapper.jar
 system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar
 
 # Display
-system_ext/etc/sysconfig/preinstalled-packages-pixeldisplayservice.xml
 system_ext/lib64/libpixeldisplaymanager_jni.so;SYMLINK=system_ext/priv-app/PixelDisplayService/lib/arm64/libpixeldisplaymanager_jni.so
 system_ext/priv-app/PixelDisplayService/PixelDisplayService.apk
 
@@ -161,19 +143,17 @@ system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
 system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/public.libraries-google.txt
 system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
-system_ext/lib64/com.google.edgetpu_app_service-V6-ndk.so
+system_ext/lib64/com.google.edgetpu_app_service-V10-ndk.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
 
 # Hotword
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/etc/sysconfig/preinstalled-packages-hotword-google-fusion-pro.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 system_ext/etc/permissions/com.android.qns.xml
 system_ext/etc/permissions/com.shannon.imsservice.xml
 system_ext/etc/permissions/com.shannon.rcsservice.xml
-system_ext/etc/sysconfig/preinstalled-packages-pixelimsmedia.xml
 system_ext/lib64/libmediaadaptor.so
 system_ext/lib64/libpixelimsmedia.so
 system_ext/lib64/vendor.google.whitechapel.audio.audioext@4.0.so
@@ -202,8 +182,7 @@ system_ext/etc/permissions/com.google.android.rilextension.xml
 system_ext/etc/permissions/com.google.euiccpixel.permissions.xml
 system_ext/etc/permissions/com.google.euiccpixel.xml
 system_ext/etc/permissions/google-ril.xml
-system_ext/etc/sysconfig/preinstalled-packages-gril.xml
-system_ext/etc/sysconfig/preinstalled-packages-ril.xml
+system_ext/etc/permissions/privapp-permlist_com.google.android.grilservice.xml
 system_ext/framework/RadioConfigLib.jar
 system_ext/framework/google-ril.jar
 system_ext/priv-app/CarrierSetup/CarrierSetup.apk;PRESIGNED
@@ -238,7 +217,6 @@ system_ext/etc/vintf/imageprocessing_hal_framework_compatibility_matrix_system_e
 
 # VZW
 system_ext/etc/permissions/vzw_mvs_permissions.xml
-system_ext/etc/sysconfig/preinstalled-packages-com.verizon.mips.services.xml
 system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED
 
 # Watchdog
