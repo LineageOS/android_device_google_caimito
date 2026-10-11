@@ -1,0 +1,3 @@
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0028/power_supply/vimon/wakeup75 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0069/power_supply/wlcin-mains/wakeup77 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-006e/power_supply/wlcin-ln8411/wakeup73 u:object_r:sysfs_wakeup:s0
