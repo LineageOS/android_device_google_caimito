@@ -1,0 +1,5 @@
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0028/power_supply/vimon/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/108d0000.hsi2c/i2c-6/6-0069/power_supply/wlcin-mains/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10ca0000.hsi2c/i2c-10/10-006e/power_supply/wlcin-ln8411/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/acpm_mfd_bus@15500000/i2c-7/7-001f/s2mpg14-rtc/rtc/rtc0/alarmtimer.5.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/synaptics_tcm.0/wakeup u:object_r:sysfs_wakeup:s0
