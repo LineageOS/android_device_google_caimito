@@ -1,14 +1,16 @@
+# Audio
+persist.vendor.audio.sw_offload=true
+
 # Bluetooth
 bluetooth.ble.client.subrate_le_audio_mode_max_subrate.config=2
-bluetooth.ble.client.subrate_le_audio_mode_min_subrate.config=2
+bluetooth.ble.client.subrate_le_audio_mode_min_subrate.config=1
 bluetooth.core.le.dsa_transport_preference=iso-sw,le-acl
 bluetooth.device_id.product_id=16657
 bluetooth.profile.gmap.enabled=true
 persist.bluetooth.bqr.event_mask=295006
-persist.bluetooth.leaudio_sw_offload=true
 persist.bluetooth.opus.enabled=true
+persist.bluetooth.sw_offload=true
 persist.bluetooth.thread_dispatcher.enabled=false
-persist.vendor.audio.leaudio_sw_offload=true
 
 # Device family
 ro.build.device_family=CM4KM4TK4TG4
