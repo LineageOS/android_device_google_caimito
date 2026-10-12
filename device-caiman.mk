@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     PixelNfcOverlayCaiman \
     PixelUwbOverlayCT3 \
     SettingsCaimanOverlay \
+    SettingsGoogleCaimanOverlay \
     SettingsGoogleOverlayVendorCaiman \
     SystemUIGoogleOverlayVendorCaiman
 
