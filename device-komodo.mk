@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     PixelDisplayServiceOverlayProductKomodo \
     PixelNfcOverlayKomodo \
     PixelUwbOverlayCT3 \
+    SettingsGoogleKomodoOverlay \
     SettingsGoogleOverlayVendorKomodo \
     SettingsKomodoOverlay \
     SystemUIGoogleOverlayVendorKomodo

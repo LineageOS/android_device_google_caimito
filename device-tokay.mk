@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     PixelDisplayServiceOverlayProductTokay \
     PixelNfcOverlayTokay \
     SettingsGoogleOverlayVendorTokay \
+    SettingsGoogleTokayOverlay \
     SettingsTokayOverlay \
     SystemUIGoogleOverlayVendorTokay
 
