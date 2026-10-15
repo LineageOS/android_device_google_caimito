@@ -38,7 +38,7 @@ persist.vendor.ril.use_radio_hal=2.2
 ro.vendor.ril.use_radio_hal=2.2
 
 # SVN
-ro.vendor.build.svn=66
+ro.vendor.build.svn=67
 
 # Vibrator
 persist.vendor.vibrator.hal.context.scale=60
